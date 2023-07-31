@@ -63,7 +63,10 @@ int registrar() //inicio da funcao para cadastrar usuarios
 	fprintf(file, "\n");
 	fclose(file);
 
+	printf("\nRegistro efetuado com sucesso!\n\n");//Msg de confirmacao de cadastro
 	system("pause");
+	system("cls");
+	
 }//fim da funcao de cadastro
 
 int consultar()//inicio da funcao para consultar cpf cadastrado
@@ -87,7 +90,7 @@ int consultar()//inicio da funcao para consultar cpf cadastrado
 	}
 	
 	else{//caso cpf seja encontrado
-	printf("\nEssas são as informações do usuário: ");
+		printf("\nEssas são as informações do usuário: ");
 	}
 	
 
@@ -133,8 +136,8 @@ int main()
 {
 	int opcao = 0; // Definindo variáveis.
 	int tryagain = 2;
-	int izanami = 1;
-	char senhaacesso[]="a";
+	int menuLoop = 1;
+	char senhaAcesso[]="a";
 	int comparacao;
 	
 	setlocale(LC_ALL, "Portuguese_Brazil.1252"); // Definindo a Linguagem.
@@ -143,17 +146,19 @@ int main()
 	{
 	
 	
-		printf("### Cartório da EBAC ###\n\nLogin de Administrador.\n\nDigite a senha de acesso: ");
-		scanf("%s",senhaacesso);
+		printf("### Cartório da EBAC ###\n\n");
+		printf("Login de Administrador.\n\n");
+		printf("Digite a senha de acesso: ");
+		scanf("%s",senhaAcesso);
 	
 		printf("\n");
 	
-		comparacao = strcmp(senhaacesso, "admin");
+		comparacao = strcmp(senhaAcesso, "admin");
 	
 		if(comparacao == 0)
 		{
 		
-			for (izanami = 1; izanami = 1;)
+			for (menuLoop = 1; menuLoop = 1;)
 			{
 				system("cls"); // cls comando de limpar a tela.
 	
