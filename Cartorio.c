@@ -13,6 +13,10 @@ int registrar() //inicio da funcao para cadastrar usuarios
 	char nome[40];
 	char sobrenome[40];
 	char curso[40];
+	char maisNomes = 0;
+	int loopMaisNomes;
+	int menuLoop = 1;
+
 //final da criacao de strings
 
 	printf("Digite o CPF a ser cadastrado: ");
@@ -67,6 +71,32 @@ int registrar() //inicio da funcao para cadastrar usuarios
 	system("pause");
 	system("cls");
 	
+for (loopMaisNomes = 2; loopMaisNomes = 2;)
+{//inicio loopMaisNomes
+	
+	printf("Registrar mais nomes?\n");
+	printf("s - Sim\nn - Não\n");
+	scanf("%s", &maisNomes);
+	
+		switch (maisNomes)
+		{
+			case 's':
+			system("cls");
+			registrar();
+			break;
+			
+			case 'n':
+			return 0;
+			break;
+
+			default:
+			printf("Essa opção não está disponível!\n\n");
+			system("pause");
+			system("cls");
+			int loopMaisNomes();
+			break;
+		}
+}//fim do loopMaisNomes
 }//fim da funcao de cadastro
 
 int consultar()//inicio da funcao para consultar cpf cadastrado
